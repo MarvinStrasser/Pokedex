@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/standards.css">
 </head>
-<body>
-    
+
+<body onload="onloadFunc()">
+    <header>
+        <div class="header_content">
+            <a href="index.html"><img class="header_img" src="assets/img/Pokedex.png" alt="Pokedex"></a>
+            <input id="search_bar" class="search_bar" type="search" placeholder="Find your Pokemon here">
+        </div>
+    </header>
+
+    <main>
+        <section class="main_section">
+            <div class="pokemon_card">
+                <h2></h2>
+            </div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+            <div class="pokemon_card"></div>
+        </section>
+
+        <section class="load_more">
+            <button>Klick here for more</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_information">
+            <p>Marvin Straßer</p>
+        </div>
+    </footer>
 </body>
+
 </html>
