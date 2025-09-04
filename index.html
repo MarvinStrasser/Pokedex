@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="shortcut icon" href="./assets/img/pokeball_favicon.png" type="image/x-icon">
+
+    <script src="./scripts/API.js"></script>
+    <script src="./scripts/buttons.js"></script>
+    <script src="./scripts/search.js"></script>
+
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/standards.css">
+    <link rel="stylesheet" href="./styles/colors.css">
 </head>
-<body>
-    
+
+<body onload="onloadFunc()">
+    <header>
+        <div class="header_content">
+            <a href="index.html"><img class="header_img" src="assets/img/Pokedex.png" alt="Pokedex"></a>
+            <input id="search_bar" class="search_bar" type="search" placeholder="Find your Pokemon here"
+                onkeyup="searchPokemon()">
+        </div>
+    </header>
+
+    <div id="loadingOverlay" class="loading-overlay d-none">
+        <div class="pokeball-big"></div>
+    </div>
+
+    <main>
+        <section id="poke_card_container" class="main_section">
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="pokemon_card">
+                <img src="" alt="">
+                <div class="name"></div>
+                <div class="types">
+                    <span></span><span></span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="load_more">
+            <button class="button" id="loadMoreBtn" onclick="loadMorePokemonBtn()">
+                <span id="label">Click here for more</span>
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_information">
+            <p>Marvin Straßer</p>
+        </div>
+    </footer>
 </body>
+
 </html>
