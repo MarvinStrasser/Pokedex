@@ -89,7 +89,6 @@ img {
     width: 50%;
 }
 
-
 .name {
     font-size: 24px;
     font-weight: bold;
@@ -113,6 +112,104 @@ span {
     border-color: black;
     color: white;
     font-weight: 500;
+}
+
+/* Big Overlay card */
+.close_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 93%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#big_name {
+    font-size: 40px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.big_main_section {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.big_pokemon_card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    height: 400px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    /* alles mittig */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.mesure {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#big_height {
+    height: 40;
+    width: 40%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#big_weight {
+    height: 40;
+    width: 40%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.abilities {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#ability_one {
+    height: 40;
+    width: 40%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#ability_two {
+    height: 40;
+    width: 40%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
 /* load more section */

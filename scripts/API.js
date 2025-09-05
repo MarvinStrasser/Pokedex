@@ -32,13 +32,15 @@ async function loadData() {
 async function addApiInfoAtIndex() {
   let cards = document.getElementsByClassName("pokemon_card");
   for (let i = 0; i < cards.length; i++) {
-    let pokemon = allPokemon[i];                 // hat name + url
+    let pokemon = allPokemon[i];
     let detail = await addPokemonStatsAtIndex(pokemon.url);
     let imgUrl = detail.sprites.other["official-artwork"].front_default;
+
     loadImage(imgUrl, i); 
     loadName(detail.name, i);
     loadTypes(detail, i);
-    
+
+    cards[i].setAttribute("onclick", `showBigCard(${i})`);
   }
   shownPokemon = document.getElementsByClassName("pokemon_card").length;
 }
@@ -62,6 +64,8 @@ function loadImage(pokemonImgUrl, index) {
   let cards = document.getElementsByClassName("pokemon_card");
   let imgElement = cards[index].getElementsByTagName("img")[0];
   imgElement.src = pokemonImgUrl;
+
+  cards[index].setAttribute("data-image", pokemonImgUrl);
 }
 
 function loadTypes(detail, index) {

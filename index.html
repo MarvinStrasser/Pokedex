@@ -10,6 +10,7 @@
     <script src="./scripts/API.js"></script>
     <script src="./scripts/buttons.js"></script>
     <script src="./scripts/search.js"></script>
+    <script src="./scripts/big_cards.js"></script>
 
 
     <link rel="stylesheet" href="./styles/style.css">
@@ -173,6 +174,24 @@
                 </div>
             </div>
 
+        </section>
+
+        <section id="big_main_section" class="big_main_section" style="display: none;">
+            <div id="big_card" class="big_pokemon_card">
+                <button class="close_button" onclick="closeBigCard()">X</button>
+                <div>
+                    <div class="big_image"><img id="big_img" src="" alt=""></div>
+                    <div id="big_name"></div>
+                </div>
+                <div class="mesure">
+                    <div id="big_height"></div>
+                    <div id="big_weight"></div>
+                </div>
+                <div class="abilities">
+                    <div id="ability_one"></div>
+                    <div id="ability_two"></div>
+                </div>
+            </div>
         </section>
 
         <section class="load_more">
