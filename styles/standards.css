@@ -6,6 +6,14 @@
     padding: 0;
     font-family: libre_caslon_text;
     max-width: 1920px;
+    font-family: jersey15-regular;
+    
+}
+
+@font-face {
+    font-family: Jersey15-Regular;
+    src: url(/assets/fonts/Jersey/Jersey15-Regular.ttf);
+    font-weight: 700;
 }
 
 main {
@@ -30,6 +38,32 @@ body {
     border: none;
 }
 
+.prev {
+    cursor: pointer;
+    background-color: rgb(232, 95, 88);
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.next {
+    cursor: pointer;
+    background-color: rgb(88, 232, 131);
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
 #label {
     display: flex;
     flex-direction: row;
@@ -39,7 +73,6 @@ body {
     font-size: 24px;
 
 }
-
 
 /* loading overlay */
 .loading-overlay {
@@ -76,4 +109,30 @@ body {
 
 .d-none {
     display: none !important;
+}
+
+@media (max-width:740px) {
+    header{
+        height: 200px;
+    }
+
+    .header_content{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header_img{
+        height: 100px;
+        width: 200px;
+    }
+
+    #search_bar{
+        width: 100%;
+    }
+}
+
+@media (max-width:445px){
+    .big_pokemon_card{
+        height: 488px;
+    }
 }

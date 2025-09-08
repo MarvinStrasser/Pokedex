@@ -1,6 +1,5 @@
 let shownPokemon = 0;
 
-// HTML Code for new empty cards after onclick Btn
 function cardTemplate() {
     return `
     <div class="pokemon_card">
@@ -11,7 +10,6 @@ function cardTemplate() {
   `;
 }
 
-// add new empty cards below
 function addEmptyCards(n) {
     let container = document.getElementById("poke_card_container");
     for (let i = 0; i < n; i++) {
@@ -19,13 +17,12 @@ function addEmptyCards(n) {
     }
 }
 
-// fill startIndex genau count Karten mit Daten aus allPokemon
 async function addApiInfoFrom(startIndex, count) {
     let cards = document.getElementsByClassName("pokemon_card");
     for (let j = 0; j < count; j++) {
         let i = startIndex + j;
         let pokemon = allPokemon[i];
-        if (!pokemon || !cards[i]) return; 
+        if (!pokemon || !cards[i]) return;
 
         let detail = await addPokemonStatsAtIndex(pokemon.url);
         let imgUrl = detail.sprites.other["official-artwork"].front_default;
@@ -36,7 +33,6 @@ async function addApiInfoFrom(startIndex, count) {
     }
 }
 
-// toggle between normal btn, and loading overlay
 function showLoading(isLoading) {
     const btn = document.getElementById("loadMoreBtn");
     const spin = document.getElementById("spinner");
@@ -45,15 +41,12 @@ function showLoading(isLoading) {
     if (isLoading) {
         btn.disabled = true;
         spin.classList.remove("d-none");
-        label.innerText = "Loading...";
     } else {
         btn.disabled = false;
         spin.classList.add("d-none");
-        label.innerText = "Click here for more";
     }
 }
 
-// if all pokemon loaded, button will be deactivated
 function endOfList() {
     const btn = document.getElementById("loadMoreBtn");
     if (btn) {
@@ -62,18 +55,22 @@ function endOfList() {
     }
 }
 
-// Hauptfunktion für den Button
 async function loadMorePokemonBtn() {
-    toggleOverlay(true);   // show overlay
+    toggleOverlay(true);
 
-    addEmptyCards(20);
-    await addApiInfoFrom(shownPokemon, 20);
-    shownPokemon += 20;
+    const loadMore = 20;
+    addEmptyCards(loadMore);
+
+    for (let i = shownPokemon; i < shownPokemon + loadMore; i++) {
+        const card = document.getElementsByClassName('pokemon_card')[i];
+        if (card) card.onclick = () => showBigCard(i);
+    }
+    await addApiInfoFrom(shownPokemon, loadMore);
+    shownPokemon += loadMore;
 
     toggleOverlay(false);
 }
 
-//toggle loading overlay
 function toggleOverlay(show) {
     const overlay = document.getElementById("loadingOverlay");
     if (!overlay) return;
@@ -82,5 +79,11 @@ function toggleOverlay(show) {
         overlay.classList.remove("d-none");
     } else {
         overlay.classList.add("d-none");
+    }
+}
+
+function clickCloseOverlay(event, element){
+    if(event.target === element){
+        closeBigCard();
     }
 }

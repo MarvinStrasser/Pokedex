@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/standards.css">
     <link rel="stylesheet" href="./styles/colors.css">
+
 </head>
 
 <body onload="onloadFunc()">
@@ -176,7 +177,7 @@
 
         </section>
 
-        <section id="big_main_section" class="big_main_section" style="display: none;">
+        <section id="big_main_section" class="big_main_section"  onclick="clickCloseOverlay(event, this)">  
             <div id="big_card" class="big_pokemon_card">
                 <button class="close_button" onclick="closeBigCard()">X</button>
                 <div>
@@ -191,6 +192,9 @@
                     <div id="ability_one"></div>
                     <div id="ability_two"></div>
                 </div>
+
+                <button class="big_nav prev" onclick="prevBigCard()">Previous</button>
+                <button class="big_nav next" onclick="nextBigCard()">Next</button>
             </div>
         </section>
 
@@ -203,7 +207,8 @@
 
     <footer>
         <div class="footer_information">
-            <p>Marvin Straßer</p>
+            <p>&copy;2025 Marvin Straßer</p>
+            
         </div>
     </footer>
 </body>

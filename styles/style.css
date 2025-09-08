@@ -1,5 +1,4 @@
 /* header */
-
 header {
     height: 200px;
     position: fixed;
@@ -50,7 +49,6 @@ header {
 }
 
 /* main */
-
 .main_section {
     margin-top: 100px;
     display: flex;
@@ -141,7 +139,6 @@ span {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.9);
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -151,11 +148,10 @@ span {
     background: #fff;
     border-radius: 16px;
     padding: 24px;
-    height: 400px;
+    height: 430px;
     width: 400px;
     max-width: 90%;
     text-align: center;
-    /* alles mittig */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     position: relative;
 }
@@ -169,18 +165,20 @@ span {
 }
 
 #big_height {
-    height: 40;
+    height: 40px;
     width: 40%;
     background-color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
 
 #big_weight {
-    height: 40;
+    height: 40px;
     width: 40%;
     background-color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -189,24 +187,27 @@ span {
 .abilities {
     display: flex;
     justify-content: center;
+    display: flex;
     gap: 30px;
     font-size: 20px;
     margin-bottom: 25px;
 }
 
 #ability_one {
-    height: 40;
+    height: 40px;
     width: 40%;
     background-color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
 
 #ability_two {
-    height: 40;
+    height: 40px;
     width: 40%;
     background-color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -219,4 +220,19 @@ span {
     display: flex;
     justify-content: center;
     padding: 20px 0px 20px 0px;
+}
+
+/* footer */
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #2718af;
+}
+
+.footer_information{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
 }
