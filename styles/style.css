@@ -61,8 +61,8 @@ header {
 
 .pokemon_card {
     background-color: rgba(211, 211, 211, 0.463);
-    height: 220px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
     margin: 60px 10px;
     cursor: pointer;
     border: solid 1px rgba(31, 31, 31, 0);
@@ -82,9 +82,11 @@ header {
 
 }
 
-img {
-    height: 50%;
+/* neu!!!!! */
+.pokemon_card img {
     width: 50%;
+    height: auto;
+    object-fit: contain;
 }
 
 .name {
@@ -156,6 +158,13 @@ span {
     position: relative;
 }
 
+/* neu!!!! */
+.big_pokemon_card img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+}
+
 .mesure {
     display: flex;
     justify-content: center;
@@ -223,7 +232,7 @@ span {
 }
 
 /* footer */
-footer{
+footer {
     height: 100px;
     width: 100%;
     display: flex;
@@ -231,7 +240,7 @@ footer{
     border-top: 1px solid #2718af;
 }
 
-.footer_information{
+.footer_information {
     display: flex;
     align-items: center;
     font-size: 40px;

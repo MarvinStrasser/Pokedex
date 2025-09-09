@@ -13,10 +13,10 @@ async function showBigCard(index) {
     document.getElementById('ability_two').innerText = detail.abilities[1]?.ability.name || '';
     setBigCardColor(detail);
     blockScrollBar(true);
+    DisabelNavBtn()
 }
 
 function closeBigCard() {
-    console.log('closeBigCard');
     document.getElementById('big_main_section').style.display = 'none';
     blockScrollBar(false);
 }
@@ -49,4 +49,21 @@ function nextBigCard() {
 function prevBigCard() {
     if (currentBigIndex <= 0) return;
     showBigCard(currentBigIndex - 1);
+}
+
+function DisabelNavBtn() {//neue funktion erster und letzter Btn gesperrt 
+    let prevBtn = document.getElementsByClassName('prev')[0];
+    let nextBtn = document.getElementsByClassName('next')[0];
+
+    if (currentBigIndex <= 0) {
+        prevBtn.classList.add('disabled');
+    } else {
+        prevBtn.classList.remove('disabled');
+    }
+
+    if (currentBigIndex >= allPokemon.length - 1) {
+        nextBtn.classList.add('disabled');
+    } else {
+        nextBtn.classList.remove('disabled');
+    }
 }

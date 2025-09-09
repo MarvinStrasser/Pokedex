@@ -3,7 +3,10 @@ let shownPokemon = 0;
 function cardTemplate() {
     return `
     <div class="pokemon_card">
-      <img src="" alt="">
+      <img src=""
+       alt=""
+       loading="lazy"
+       decoding="async">
       <div class="name"></div>
       <div class="types"><span></span><span></span></div>
     </div>
@@ -82,8 +85,8 @@ function toggleOverlay(show) {
     }
 }
 
-function clickCloseOverlay(event, element){
-    if(event.target === element){
+function clickCloseOverlay(event, element) {
+    if (event.target === element) {
         closeBigCard();
     }
 }

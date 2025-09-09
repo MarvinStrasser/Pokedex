@@ -16,7 +16,6 @@ async function loadData() {
     }
 
     const result = await response.json();
-    console.log(result);
     allPokemon = result.results;
     addApiInfoAtIndex()
 
@@ -26,6 +25,7 @@ async function loadData() {
 }
 
 async function addApiInfoAtIndex() {
+  toggleOverlay(true);// Overlay wartet bis alle Bilder geladen worden sind
   let cards = document.getElementsByClassName("pokemon_card");
   for (let i = 0; i < cards.length; i++) {
     let pokemon = allPokemon[i];
@@ -39,6 +39,7 @@ async function addApiInfoAtIndex() {
     cards[i].setAttribute("onclick", `showBigCard(${i})`);
   }
   shownPokemon = document.getElementsByClassName("pokemon_card").length;
+  toggleOverlay(false);//Overlay aus
 }
 
 async function addPokemonStatsAtIndex(url) {

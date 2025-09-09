@@ -1,4 +1,12 @@
 /* body */
+@font-face {
+    font-family: 'Jersey15';
+    src: url('../assets/fonts/Jersey15-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -6,14 +14,8 @@
     padding: 0;
     font-family: libre_caslon_text;
     max-width: 1920px;
-    font-family: jersey15-regular;
-    
-}
+    font-family: 'Jersey15', sans-serif;
 
-@font-face {
-    font-family: Jersey15-Regular;
-    src: url(/assets/fonts/Jersey/Jersey15-Regular.ttf);
-    font-weight: 700;
 }
 
 main {
@@ -38,6 +40,19 @@ body {
     border: none;
 }
 
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close_button:hover {
+    color: red;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .prev {
     cursor: pointer;
     background-color: rgb(232, 95, 88);
@@ -51,6 +66,12 @@ body {
     font-size: 20px;
 }
 
+.prev:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .next {
     cursor: pointer;
     background-color: rgb(88, 232, 131);
@@ -62,6 +83,19 @@ body {
     border: none;
     margin-left: 10px;
     font-size: 20px;
+}
+
+.next:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.big_nav.disabled {
+    background-color: #333;
+    color: #fff;
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #label {
@@ -81,7 +115,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 1);
     /* dunkler Hintergrund */
     display: flex;
     justify-content: center;
@@ -111,28 +145,44 @@ body {
     display: none !important;
 }
 
+/* Media Queries */
+@media (min-width: 1024px) {
+    .big_pokemon_card {
+        max-width: 850px;
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .big_pokemon_card {
+        height: auto;
+        max-width: 700px;
+        width: 90%;
+    }
+}
+
 @media (max-width:740px) {
-    header{
+    header {
         height: 200px;
     }
 
-    .header_content{
+    .header_content {
         flex-direction: column;
         justify-content: space-around;
     }
 
-    .header_img{
+    .header_img {
         height: 100px;
         width: 200px;
     }
 
-    #search_bar{
+    #search_bar {
         width: 100%;
     }
 }
 
-@media (max-width:445px){
-    .big_pokemon_card{
+@media (max-width:445px) {
+    .big_pokemon_card {
         height: 488px;
     }
 }
