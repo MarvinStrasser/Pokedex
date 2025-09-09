@@ -1,4 +1,5 @@
 let currentBigIndex = 0;
+
 async function showBigCard(index) {
     currentBigIndex = index;
     let pokemon = allPokemon[index];
